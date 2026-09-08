@@ -27,16 +27,24 @@
             }
         }
     </script>
-    <!-- Animación para el texto en movimiento -->
+    <!-- Animaciones personalizadas -->
     <style>
         @keyframes gradientMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+        @keyframes pinkGlow {
+            0% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+            100% { opacity: 0.3; transform: scale(1); }
+        }
         .animate-gradient-text {
             background-size: 200% auto;
             animation: gradientMove 4s ease infinite;
+        }
+        .animate-bg-glow {
+            animation: pinkGlow 6s ease-in-out infinite;
         }
     </style>
 </head>
@@ -49,7 +57,7 @@
 
     <!-- HERO SECTION & VSL -->
     <header class="relative overflow-hidden pt-12 pb-20 px-4 sm:px-6 lg:px-8">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-brandPink/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-brandPink/15 rounded-full blur-3xl pointer-events-none animate-bg-glow"></div>
 
         <div class="max-w-5xl mx-auto text-center relative z-10">
             <span class="inline-block bg-white/5 text-brandLightPink text-xs sm:text-sm font-medium px-4 sm:px-5 py-2 rounded-full mb-6 border border-brandPink/35 tracking-wide uppercase backdrop-blur-md">
@@ -58,7 +66,6 @@
 
             <h1 class="text-3xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
                 Ilumina y Crea <br class="hidden sm:block">
-                <!-- TÍTULO CON DEGRADADO ANIMADO EN MOVIMIENTO -->
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-brandPink to-pink-200 animate-gradient-text">
                     Velas Artesanales
                 </span> <br class="hidden sm:block">
@@ -69,7 +76,7 @@
                 Descubre el arte de crear velas aromáticas y de repostería hiperrealista. Conviértelo en tu emprendimiento más rentable o en tu refugio de desconexión y terapia personal.
             </p>
 
-            <!-- VSL CONTAINER RESPONSIVE -->
+            <!-- VSL CONTAINER -->
             <div class="max-w-4xl mx-auto p-2 sm:p-4 bg-gradient-to-b from-white/10 to-transparent rounded-2xl sm:rounded-3xl shadow-2xl border border-white/10 backdrop-blur-xl mb-12">
                 <div class="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl bg-black">
                     <iframe class="absolute top-0 left-0 w-full h-full" 
@@ -82,7 +89,7 @@
                 </div>
             </div>
 
-            <!-- BLOQUE DE PRECIO ESPECIAL -->
+            <!-- PRECIO ESPECIAL -->
             <div class="mb-8 p-5 sm:p-6 bg-cardDark/90 border border-brandPink/40 rounded-3xl max-w-lg mx-auto shadow-xl">
                 <p class="text-xs uppercase tracking-widest text-gray-400 mb-1">Precio especial de lanzamiento</p>
                 <div class="flex items-center justify-center gap-4">
@@ -260,30 +267,81 @@
         </div>
     </section>
 
-    <!-- PREGUNTAS FRECUENTES (FAQ) -->
-    <section class="py-20 px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-3">Preguntas Frecuentes</h2>
+    <!-- PREGUNTAS FRECUENTES (FAQ) CON ACORDEÓN TIPO "+" Y FONDO ROSADO EN MOVIMIENTO -->
+    <section class="py-24 px-4 relative overflow-hidden">
+        <!-- Fondo rosado difuminado en movimiento -->
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brandPink/10 rounded-full blur-3xl pointer-events-none animate-bg-glow"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-3">Preguntas Frecuentes</h2>
                 <p class="text-gray-400">Resolvemos tus dudas para que des el paso con total seguridad.</p>
             </div>
 
             <div class="space-y-4">
-                <div class="bg-cardDark p-6 rounded-2xl border border-white/5">
-                    <h3 class="font-bold text-lg text-white mb-2">¿Necesito experiencia previa para tomar el curso?</h3>
-                    <p class="text-gray-400 text-sm">Absolutamente no. El curso está diseñado desde cero, llevándote paso a paso de principiante a experta, incluso si nunca has tocado una cera en tu vida.</p>
+                <!-- Pregunta 1 -->
+                <div class="bg-cardDark rounded-2xl border border-white/5 overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center gap-4 focus:outline-none">
+                        <span class="font-bold text-lg text-white">¿Necesito experiencia previa para tomar el curso?</span>
+                        <span class="w-8 h-8 rounded-full bg-brandPink/10 text-brandPink flex items-center justify-center font-bold text-xl transition-transform duration-300 flex-shrink-0 icon-plus">+</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-gray-400 text-sm leading-relaxed">
+                        <p class="pb-6">Absolutamente no. El curso está diseñado desde cero, llevándote paso a paso de principiante a experta, incluso si nunca has tocado una cera en tu vida.</p>
+                    </div>
                 </div>
-                <div class="bg-cardDark p-6 rounded-2xl border border-white/5">
-                    <h3 class="font-bold text-lg text-white mb-2">¿Cómo y cuándo recibo el acceso al curso?</h3>
-                    <p class="text-gray-400 text-sm">Inmediatamente después de realizar tu pago a través de Hotmart, recibirás un correo electrónico con tus datos de acceso a la plataforma privada. El acceso es ilimitado y de por vida.</p>
+
+                <!-- Pregunta 2 -->
+                <div class="bg-cardDark rounded-2xl border border-white/5 overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center gap-4 focus:outline-none">
+                        <span class="font-bold text-lg text-white">¿Cómo y cuándo recibo el acceso al curso?</span>
+                        <span class="w-8 h-8 rounded-full bg-brandPink/10 text-brandPink flex items-center justify-center font-bold text-xl transition-transform duration-300 flex-shrink-0 icon-plus">+</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-gray-400 text-sm leading-relaxed">
+                        <p class="pb-6">Inmediatamente después de realizar tu pago a través de Hotmart, recibirás un correo electrónico con tus datos de acceso a la plataforma privada. El acceso es ilimitado y de por vida.</p>
+                    </div>
                 </div>
-                <div class="bg-cardDark p-6 rounded-2xl border border-white/5">
-                    <h3 class="font-bold text-lg text-white mb-2">¿El curso sirve si quiero montar un negocio de velas?</h3>
-                    <p class="text-gray-400 text-sm">¡Totalmente! No solo aprendes la técnica artística y de formulación perfecta, sino también los secretos para comercializarlas y convertir tu pasión en un emprendimiento rentable.</p>
+
+                <!-- Pregunta 3 -->
+                <div class="bg-cardDark rounded-2xl border border-white/5 overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center gap-4 focus:outline-none">
+                        <span class="font-bold text-lg text-white">¿El curso sirve si quiero montar un negocio de velas?</span>
+                        <span class="w-8 h-8 rounded-full bg-brandPink/10 text-brandPink flex items-center justify-center font-bold text-xl transition-transform duration-300 flex-shrink-0 icon-plus">+</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-gray-400 text-sm leading-relaxed">
+                        <p class="pb-6">¡Totalmente! No solo aprendes la técnica artística y de formulación perfecta, sino también los secretos para comercializarlas y convertir tu pasión en un emprendimiento rentable.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- SCRIPT PARA EL ACORDEÓN DE PREGUNTAS -->
+    <script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.icon-plus');
+            
+            // Cerrar otros abiertos (opcional, si quieres que solo uno esté abierto a la vez)
+            document.querySelectorAll('.faq-content').forEach((item) => {
+                if (item !== content) {
+                    item.style.maxHeight = null;
+                    item.previousElementSibling.querySelector('.icon-plus').textContent = '+';
+                    item.previousElementSibling.querySelector('.icon-plus').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Alternar el actual
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.textContent = '+';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.textContent = '+';
+                icon.style.transform = 'rotate(45deg)'; // Gira el '+' convirtiéndolo en '×'
+            }
+        }
+    </script>
 
     <!-- CTA FINAL DE ALTA CONVERSIÓN -->
     <section class="py-24 bg-gradient-to-b from-cardDark/50 to-darkBg text-center px-4 relative overflow-hidden">
