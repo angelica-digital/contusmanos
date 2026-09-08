@@ -20,15 +20,15 @@
                         darkBg: '#0A0A0A',
                         cardDark: '#141414',
                         cardHover: '#1A1A1A',
-                        brandPink: '#FF77A9',       /* Rosa cálido y elegante alineado a su Instagram */
-                        brandLightPink: '#FFB6C1',  /* Tono secundario pastel */
+                        brandPink: '#FF77A9',
+                        brandLightPink: '#FFB6C1',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-darkBg text-gray-100 font-sans antialiased selection:bg-brandPink selection:text-black">
+<body class="bg-darkBg text-gray-100 font-sans antialiased selection:bg-brandPink selection:text-black overflow-x-hidden">
 
     <!-- BARRA DE URGENCIA SUPERIOR -->
     <div class="bg-gradient-to-r from-pink-500 via-brandPink to-pink-400 text-black font-bold text-xs sm:text-sm text-center py-2 px-4 tracking-wider uppercase shadow-md">
@@ -36,29 +36,29 @@
     </div>
 
     <!-- HERO SECTION & VSL -->
-    <header class="relative overflow-hidden pt-16 pb-24 px-4 sm:px-6 lg:px-8">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brandPink/15 rounded-full blur-3xl pointer-events-none"></div>
+    <header class="relative overflow-hidden pt-12 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-brandPink/15 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="max-w-5xl mx-auto text-center relative z-10">
-            <span class="inline-block bg-white/5 text-brandLightPink text-xs sm:text-sm font-medium px-5 py-2 rounded-full mb-6 border border-brandPink/35 tracking-wide uppercase backdrop-blur-md">
+            <span class="inline-block bg-white/5 text-brandLightPink text-xs sm:text-sm font-medium px-4 sm:px-5 py-2 rounded-full mb-6 border border-brandPink/35 tracking-wide uppercase backdrop-blur-md">
                 🎓 Masterclass en Vídeo Formato HD • +2.000 Alumnas Formadas
             </span>
 
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-                Ilumina y Crea <br>
+            <h1 class="text-3xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Ilumina y Crea <br class="hidden sm:block">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandPink via-pink-300 to-brandLightPink">
                     Velas Artesanales
-                </span> <br>
+                </span> <br class="hidden sm:block">
                 con Tus Manos
             </h1>
 
-            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed font-light">
+            <p class="max-w-3xl mx-auto text-base sm:text-xl text-gray-300 mb-10 leading-relaxed font-light px-2">
                 Descubre el arte de crear velas aromáticas y de repostería hiperrealista. Conviértelo en tu emprendimiento más rentable o en tu refugio de desconexión y terapia personal.
             </p>
 
-            <!-- VSL CONTAINER -->
-            <div class="max-w-4xl mx-auto p-3 sm:p-4 bg-gradient-to-b from-white/10 to-transparent rounded-3xl shadow-2xl border border-white/10 backdrop-blur-xl mb-12">
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black">
+            <!-- VSL CONTAINER RESPONSIVE -->
+            <div class="max-w-4xl mx-auto p-2 sm:p-4 bg-gradient-to-b from-white/10 to-transparent rounded-2xl sm:rounded-3xl shadow-2xl border border-white/10 backdrop-blur-xl mb-12">
+                <div class="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl bg-black">
                     <iframe class="absolute top-0 left-0 w-full h-full" 
                             src="https://www.youtube.com/embed/TU_ID_DE_YOUTUBE" 
                             title="Bienvenida a la Academia Con Tus Manos" 
@@ -70,105 +70,94 @@
             </div>
 
             <!-- BLOQUE DE PRECIO ESPECIAL -->
-            <div class="mb-8 p-6 bg-cardDark/90 border border-brandPink/40 rounded-3xl max-w-lg mx-auto shadow-xl">
+            <div class="mb-8 p-5 sm:p-6 bg-cardDark/90 border border-brandPink/40 rounded-3xl max-w-lg mx-auto shadow-xl">
                 <p class="text-xs uppercase tracking-widest text-gray-400 mb-1">Precio especial de lanzamiento</p>
                 <div class="flex items-center justify-center gap-4">
-                    <span class="text-gray-500 line-through text-xl">452.00 BRL</span>
-                    <span class="text-4xl sm:text-5xl font-extrabold text-brandPink">$69.99 USD</span>
+                    <span class="text-gray-500 line-through text-lg sm:text-xl">452.00 BRL</span>
+                    <span class="text-3xl sm:text-5xl font-extrabold text-brandPink">$69.99 USD</span>
                 </div>
                 <p class="text-xs text-gray-400 mt-2">Pago único • Acceso ilimitado de por vida</p>
             </div>
 
-            <div class="space-y-4">
-                <a href="https://hotm.art/iluminaycreavelasartesanales" target="_blank" class="inline-block bg-gradient-to-r from-brandPink to-pink-400 hover:from-pink-400 hover:to-pink-500 text-black font-extrabold text-lg sm:text-xl px-12 py-5 rounded-full shadow-[0_0_35px_rgba(255,119,169,0.4)] transition-all duration-300 transform hover:-scale-105">
+            <!-- CTA CORREGIDO (SIN EFECTO ESPEJO) -->
+            <div class="space-y-4 px-4">
+                <a href="https://hotm.art/iluminaycreavelasartesanales" target="_blank" class="inline-block w-full sm:w-auto bg-gradient-to-r from-brandPink to-pink-400 hover:from-pink-400 hover:to-pink-500 text-black font-extrabold text-base sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-[0_0_35px_rgba(255,119,169,0.4)] transition-all duration-300 transform hover:scale-105 text-center">
                     ¡QUIERO INSCRIBIRME AL CURSO AHORA! 💕
                 </a>
-                <div class="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
                     <span>🔒 Pago 100% seguro por Hotmart</span>
-                    <span>•</span>
+                    <span class="hidden sm:inline">•</span>
                     <span>⚡ Acceso inmediato</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- SECCIÓN ACERCA DE LA PRODUCTORA (2 COLUMNAS) -->
-    <section class="py-24 bg-cardDark/80 border-y border-white/5 relative">
+    <!-- SECCIÓN ACERCA DE LA PRODUCTORA -->
+    <section class="py-20 sm:py-24 bg-cardDark/80 border-y border-white/5 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center mb-16">
+            <div class="text-center mb-12 sm:mb-16">
                 <span class="text-brandPink uppercase tracking-widest text-xs font-bold block mb-3">CONOCE A TU INSTRUCTORA</span>
                 <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">Acerca de la Productora</h2>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Columna Izquierda: Imagen / Foto de Stefany -->
                 <div class="lg:col-span-5">
                     <div class="relative mx-auto max-w-md bg-gradient-to-b from-brandPink/30 to-transparent p-3 rounded-3xl border border-white/10 shadow-2xl">
                         <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-gray-900 relative">
-                            <img src="URL_FOTO_DE_STEFANY.jpg" alt="Stefany Querubín - Creadora de Con Tus Manos" class="w-full h-full object-cover">
+                            <img src="URL_FOTO_DE_STEFANY.jpg" alt="Stefany Querubín" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Texto descriptivo profesional -->
                 <div class="lg:col-span-7 space-y-6 text-gray-300 text-base sm:text-lg font-light leading-relaxed">
                     <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2">Desarrollado por <span class="text-brandPink">Stefany Querubín</span></h3>
-                    
-                    <p>
-                        Soy enfermera de formación y, tras varios años dedicados al ámbito de la salud, decidí seguir mi verdadera pasión: la creación de velas artesanales. Desde entonces, me he sumergido en este hermoso arte y he tenido el privilegio de convertirme en instructora reconocida en la fabricación de velas.
-                    </p>
-
-                    <p>
-                        Mi metodología se centra en ofrecer experiencias de aprendizaje únicas y efectivas, guiadas por un enfoque práctico y dinámico. He diseñado un curso integral que abarca más de 20 módulos, cuidadosamente estructurados para llevarte de la mano en un recorrido paso a paso.
-                    </p>
-
+                    <p>Soy enfermera de formación y, tras varios años dedicados al ámbito de la salud, decidí seguir mi verdadera pasión: la creación de velas artesanales. Desde entonces, me he sumergido en este hermoso arte y he tenido el privilegio de convertirme en instructora reconocida en la fabricación de velas.</p>
+                    <p>Mi metodología se centra en ofrecer experiencias de aprendizaje únicas y efectivas, guiadas por un enfoque práctico y dinámico. He diseñado un curso integral que abarca más de 20 módulos, cuidadosamente estructurados para llevarte de la mano en un recorrido paso a paso.</p>
                     <p class="text-white font-medium bg-white/5 p-4 rounded-2xl border border-white/10">
                         "Estoy comprometida con empoderar a mis estudiantes, brindándoles las herramientas necesarias para desarrollar su creatividad y alcanzar sus objetivos en este apasionante mundo."
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- MÓDULOS DEL MASTERCLASS -->
-    <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section class="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div class="text-center mb-16">
             <span class="text-brandPink uppercase tracking-widest text-xs font-bold block mb-3">CONTENIDO DETALLADO</span>
             <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">¿Qué aprenderás en el Masterclass?</h2>
             <p class="text-gray-400 text-lg max-w-2xl mx-auto">Un programa estructurado quirúrgicamente desde los fundamentos técnicos hasta las técnicas más avanzadas del mercado.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
-                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">01</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div class="bg-cardDark p-6 sm:p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300">
+                <div class="text-brandPink text-4xl font-extrabold mb-4">01</div>
                 <h3 class="text-xl font-bold mb-3 text-white">Fórmula y Materiales Correctos</h3>
                 <p class="text-gray-400 text-sm leading-relaxed">Aprende la proporción exacta para evitar errores comunes, eligiendo ceras, parafinas y mechas profesionales desde el día uno.</p>
             </div>
-            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
-                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">02</div>
+            <div class="bg-cardDark p-6 sm:p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300">
+                <div class="text-brandPink text-4xl font-extrabold mb-4">02</div>
                 <h3 class="text-xl font-bold mb-3 text-white">Colorimetría y Aromaterapia</h3>
                 <p class="text-gray-400 text-sm leading-relaxed">Dominio total de esencias, aceites aromáticos y pigmentos para lograr fragancias cautivadoras y paletas visuales perfectas.</p>
             </div>
-            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
-                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">03</div>
+            <div class="bg-cardDark p-6 sm:p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300">
+                <div class="text-brandPink text-4xl font-extrabold mb-4">03</div>
                 <h3 class="text-xl font-bold mb-3 text-white">Cera de Soja, Coco y Gel</h3>
                 <p class="text-gray-400 text-sm leading-relaxed">Técnicas avanzadas para trabajar con ceras vegetales ecológicas de alta gama y velas de gel con efectos translúcidos impresionantes.</p>
             </div>
-            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
-                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">04</div>
+            <div class="bg-cardDark p-6 sm:p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300">
+                <div class="text-brandPink text-4xl font-extrabold mb-4">04</div>
                 <h3 class="text-xl font-bold mb-3 text-white">Velas de Repostería y Chantilly</h3>
                 <p class="text-gray-400 text-sm leading-relaxed">Crea postres hiperrealistas asombrosos: efectos chantilly, fresas, helados, tarros de café y pasteles decorativos.</p>
             </div>
-            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
-                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">05</div>
+            <div class="bg-cardDark p-6 sm:p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300">
+                <div class="text-brandPink text-4xl font-extrabold mb-4">05</div>
                 <h3 class="text-xl font-bold mb-3 text-white">Wax Melts y Horneados</h3>
                 <p class="text-gray-400 text-sm leading-relaxed">Aromas sólidos para quemadores, figuras moldeadas y técnicas de acabado horneado para enriquecer tu catálogo.</p>
             </div>
-            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
-                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">06</div>
+            <div class="bg-cardDark p-6 sm:p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300">
+                <div class="text-brandPink text-4xl font-extrabold mb-4">06</div>
                 <h3 class="text-xl font-bold mb-3 text-white">Certificado de Finalización</h3>
                 <p class="text-gray-400 text-sm leading-relaxed">Obtén tu diploma personalizado con tu nombre al completar el curso para avalar tus conocimientos y profesionalismo.</p>
             </div>
@@ -200,7 +189,7 @@
     </section>
 
     <!-- TESTIMONIOS Y PRUEBA SOCIAL -->
-    <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section class="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div class="text-center mb-16">
             <span class="text-brandPink uppercase tracking-widest text-xs font-bold block mb-3">HISTORIAS DE ÉXITO</span>
             <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">Lo que dicen nuestras alumnas</h2>
@@ -242,8 +231,8 @@
     </section>
 
     <!-- GARANTÍA DE SATISFACCIÓN -->
-    <section class="py-16 bg-cardDark/40 border-y border-white/5">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="py-16 bg-cardDark/40 border-y border-white/5 px-4">
+        <div class="max-w-4xl mx-auto text-center">
             <div class="inline-block p-4 rounded-full bg-brandPink/10 text-brandPink mb-4 text-3xl">🛡️</div>
             <h2 class="text-2xl sm:text-3xl font-bold mb-4">Garantía Incondicional de 7 Días</h2>
             <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-light">
@@ -253,8 +242,8 @@
     </section>
 
     <!-- PREGUNTAS FRECUENTES (FAQ) -->
-    <section class="py-20 bg-cardDark/50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold mb-3">Preguntas Frecuentes</h2>
                 <p class="text-gray-400">Resolvemos tus dudas para que des el paso con total seguridad.</p>
@@ -284,14 +273,14 @@
             <h2 class="text-3xl sm:text-5xl font-extrabold mb-6">¿Lista para comenzar tu viaje creativo?</h2>
             <p class="text-gray-300 text-lg mb-10 font-light">Únete hoy a nuestra comunidad de creadoras, aprende un oficio hermoso y rentable y encuentra tu espacio de desconexión.</p>
             
-            <a href="https://hotm.art/iluminaycreavelasartesanales" target="_blank" class="inline-block bg-gradient-to-r from-brandPink to-pink-400 hover:from-pink-400 hover:to-pink-500 text-black font-extrabold text-lg sm:text-xl px-12 py-5 rounded-full shadow-[0_0_35px_rgba(255,119,169,0.4)] transition-all duration-300 transform hover:-scale-105">
+            <a href="https://hotm.art/iluminaycreavelasartesanales" target="_blank" class="inline-block w-full sm:w-auto bg-gradient-to-r from-brandPink to-pink-400 hover:from-pink-400 hover:to-pink-500 text-black font-extrabold text-base sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-[0_0_35px_rgba(255,119,169,0.4)] transition-all duration-300 transform hover:scale-105 text-center">
                 INSCRIBIRME AHORA CON ACCESO INMEDIATO 🚀
             </a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-10 text-center text-xs text-gray-500 border-t border-white/5">
+    <footer class="py-10 text-center text-xs text-gray-500 border-t border-white/5 px-4">
         <p>© 2026 Con Tus Manos | Academia de Velas Artesanales. Todos los derechos reservados.</p>
     </footer>
 
