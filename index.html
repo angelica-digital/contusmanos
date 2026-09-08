@@ -6,15 +6,20 @@
     <title>Ilumina y Crea Velas Artesanales | Academia Con Tus Manos</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
                     colors: {
-                        darkBg: '#121212',
-                        cardDark: '#1E1E1E',
-                        cardHover: '#252525',
+                        darkBg: '#0D0D0D',
+                        cardDark: '#161616',
+                        cardHover: '#1E1E1E',
                         brandPink: '#FF69B4',
                         brandLightPink: '#FFB6C1',
                     }
@@ -25,28 +30,40 @@
 </head>
 <body class="bg-darkBg text-gray-100 font-sans antialiased selection:bg-brandPink selection:text-white">
 
-    <!-- 1. HERO SECTION & VSL -->
-    <header class="relative overflow-hidden pt-12 pb-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-5xl mx-auto text-center">
+    <!-- BARRA DE URGENCIA SUPERIOR -->
+    <div class="bg-gradient-to-r from-pink-600 via-brandPink to-pink-500 text-black font-bold text-xs sm:text-sm text-center py-2 px-4 tracking-wider uppercase shadow-md">
+        ✨ ¡Inscripciones Abiertas! • Cupos limitados con acompañamiento directo de Stefhanie
+    </div>
+
+    <!-- HERO SECTION & VSL -->
+    <header class="relative overflow-hidden pt-16 pb-24 px-4 sm:px-6 lg:px-8">
+        <!-- Resplandor de fondo (Glow effect) -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brandPink/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
             
             <!-- Badge Superior -->
-            <span class="inline-block bg-brandPink/10 text-brandLightPink text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-brandPink/30 tracking-wide uppercase">
-                ✨ Academia Online & Presencial • +2.000 Alumnas Formadas
+            <span class="inline-block bg-white/5 text-brandLightPink text-xs sm:text-sm font-medium px-5 py-2 rounded-full mb-6 border border-brandPink/30 tracking-wide uppercase backdrop-blur-md">
+                🎓 Academia Online & Presencial • +2.000 Alumnas Formadas
             </span>
 
             <!-- Título Principal -->
-            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
-                Ilumina y Crea <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandPink to-brandLightPink">Velas Artesanales</span> con Tus Manos
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Ilumina y Crea <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandPink via-pink-400 to-brandLightPink">
+                    Velas Artesanales
+                </span> <br>
+                con Tus Manos
             </h1>
 
             <!-- Subtítulo -->
-            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed">
-                Descubre el arte de crear velas aromáticas y de repostería hiperrealista. Conviértelo en tu emprendimiento rentable o en tu espacio de desconexión y terapia personal.
+            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed font-light">
+                Descubre el arte de crear velas aromáticas y de repostería hiperrealista. Conviértelo en tu emprendimiento más rentable o en tu refugio de desconexión y terapia personal.
             </p>
 
-            <!-- CONTENEDOR VSL (VIDEO DE YOUTUBE) -->
-            <div class="max-w-4xl mx-auto bg-cardDark p-3 rounded-2xl shadow-2xl border border-gray-800 mb-10">
-                <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-inner bg-black">
+            <!-- CONTENEDOR VSL (VIDEO DE YOUTUBE) CON MARCO PREMIUM -->
+            <div class="max-w-4xl mx-auto p-3 sm:p-4 bg-gradient-to-b from-white/10 to-transparent rounded-3xl shadow-2xl border border-white/10 backdrop-blur-xl mb-12">
+                <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black">
                     <!-- Reemplaza el ID de YouTube por el video de bienvenida de Stefhanie -->
                     <iframe class="absolute top-0 left-0 w-full h-full" 
                             src="https://www.youtube.com/embed/TU_ID_DE_YOUTUBE" 
@@ -58,88 +75,123 @@
                 </div>
             </div>
 
-            <!-- Botón de Llamada a la Acción (CTA) -->
-            <div>
-                <a href="https://hotm.art/iluminaycreavelasartesanales" target="_blank" class="inline-block bg-gradient-to-r from-brandPink to-pink-500 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg px-10 py-4 rounded-full shadow-lg shadow-brandPink/30 transition-all duration-300 transform hover:-translate-y-1">
+            <!-- CTA Principal -->
+            <div class="space-y-4">
+                <a href="https://hotm.art/iluminaycreavelasartesanales" target="_blank" class="inline-block bg-gradient-to-r from-brandPink to-pink-500 hover:from-pink-500 hover:to-pink-600 text-black font-extrabold text-lg sm:text-xl px-12 py-5 rounded-full shadow-[0_0_35px_rgba(255,105,180,0.4)] transition-all duration-300 transform hover:-scale-105">
                     ¡QUIERO INSCRIBIRME AL CURSO AHORA! 💕
                 </a>
-                <p class="text-xs text-gray-400 mt-3">Acceso inmediato 100% online • Garantizado por Hotmart</p>
+                <div class="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
+                    <span>🔒 Pago 100% seguro por Hotmart</span>
+                    <span>•</span>
+                    <span>⚡ Acceso inmediato de por vida</span>
+                </div>
             </div>
 
         </div>
     </header>
 
-    <!-- 2. SOBRE LA PROFESORA -->
-    <section class="py-16 bg-cardDark/50 border-y border-gray-800">
+    <!-- SECCIÓN DE AUTORIDAD (SOBRE LA PROFESORA) -->
+    <section class="py-20 bg-cardDark/80 border-y border-white/5 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-brandLightPink">Hola, soy Stefhanie Kerubin 👋</h2>
-            <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
-                Desde hace más de 2 años me he sumergido en este increíble mundo de las velas artesanales. Comencé mi viaje con un curso online, y sé lo difícil que puede ser encontrar la información correcta. Por eso creé esta academia completa, para guiarte paso a paso sin guardarme ningún secreto, asegurándome de que te sientas segura para crear, regalar o emprender con éxito.
+            <h2 class="text-3xl font-bold mb-6 text-brandLightPink">Hola, soy Stefhanie Kerubin 👋</h2>
+            <p class="text-gray-300 text-lg sm:text-xl leading-relaxed font-light mb-8">
+                "Desde hace más de 2 años me sumergí en este increíble mundo. Comencé mi viaje con un curso online y sé lo difícil que es encontrar la información correcta. Por eso creé esta academia: para darte el paso a paso exacto, sin secretos, y asegurarme de que te sientas completamente segura al crear, regalar o vender."
             </p>
+            <div class="inline-flex items-center gap-3 bg-white/5 px-6 py-3 rounded-full border border-white/10">
+                <span class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-sm font-medium text-gray-200">+2.000 alumnas transformando su creatividad en un negocio</span>
+            </div>
         </div>
     </section>
 
-    <!-- 3. MÓDULOS Y CONTENIDO -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <!-- MÓDULOS DEL MASTERCLASS (GRID MODERNA) -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">¿Qué aprenderás en el Masterclass?</h2>
-            <p class="text-gray-400 text-lg">Un programa estructurado desde los fundamentos hasta técnicas avanzadas de repostería en velas.</p>
+            <span class="text-brandPink uppercase tracking-widest text-xs font-bold block mb-3">CONTENIDO EXCLUSIVO</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">¿Qué aprenderás en el Masterclass?</h2>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">Un programa estructurado quirúrgicamente desde los fundamentos técnicos hasta las técnicas más avanzadas del mercado.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Módulo 1 -->
-            <div class="bg-cardDark p-6 rounded-2xl border border-gray-800 hover:border-brandPink/50 transition-all">
-                <div class="text-brandPink text-3xl font-bold mb-3">01</div>
-                <h3 class="text-xl font-semibold mb-2">Fundamentos y Materiales</h3>
-                <p class="text-gray-400 text-sm">Elección correcta de ceras, parafinas, mechas, moldes y herramientas esenciales para iniciar con pie derecho.</p>
+            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
+                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">01</div>
+                <h3 class="text-xl font-bold mb-3 text-white">Fundamentos y Materiales</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Selección correcta de ceras vegetales, parafinas, mechas adecuadas, moldes y herramientas profesionales para iniciar con pie derecho.</p>
             </div>
             <!-- Módulo 2 -->
-            <div class="bg-cardDark p-6 rounded-2xl border border-gray-800 hover:border-brandPink/50 transition-all">
-                <div class="text-brandPink text-3xl font-bold mb-3">02</div>
-                <h3 class="text-xl font-semibold mb-2">Colorimetría y Aromaterapia</h3>
-                <p class="text-gray-400 text-sm">Cómo combinar esencias, aceites y pigmentos para crear aromas cautivadores y paletas de colores perfectas.</p>
+            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
+                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">02</div>
+                <h3 class="text-xl font-bold mb-3 text-white">Colorimetría y Aromaterapia</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Dominio total de esencias, aceites aromáticos y pigmentos para lograr fragancias cautivadoras y paletas visuales perfectas.</p>
             </div>
             <!-- Módulo 3 -->
-            <div class="bg-cardDark p-6 rounded-2xl border border-gray-800 hover:border-brandPink/50 transition-all">
-                <div class="text-brandPink text-3xl font-bold mb-3">03</div>
-                <h3 class="text-xl font-semibold mb-2">Cera de Soja y Cocos</h3>
-                <p class="text-gray-400 text-sm">Técnicas avanzadas para trabajar con ceras vegetales ecológicas y lograr acabados impecables en recipientes.</p>
+            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
+                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">03</div>
+                <h3 class="text-xl font-bold mb-3 text-white">Cera de Soja y Cocos</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Técnicas avanzadas para trabajar con ceras ecológicas de alta gama, evitando defectos comunes y logrando acabados impecables.</p>
             </div>
             <!-- Módulo 4 -->
-            <div class="bg-cardDark p-6 rounded-2xl border border-gray-800 hover:border-brandPink/50 transition-all">
-                <div class="text-brandPink text-3xl font-bold mb-3">04</div>
-                <h3 class="text-xl font-semibold mb-2">Velas de Repostería</h3>
-                <p class="text-gray-400 text-sm">Creación de postres hiperrealistas, efectos chantilly, fresas, helados, tarros de café y velas horneadas.</p>
+            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
+                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">04</div>
+                <h3 class="text-xl font-bold mb-3 text-white">Velas de Repostería</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Crea postres hiperrealistas impresionantes: efectos chantilly, fresas, helados, tarros de café y velas horneadas de alto impacto visual.</p>
             </div>
             <!-- Módulo 5 -->
-            <div class="bg-cardDark p-6 rounded-2xl border border-gray-800 hover:border-brandPink/50 transition-all">
-                <div class="text-brandPink text-3xl font-bold mb-3">05</div>
-                <h3 class="text-xl font-semibold mb-2">Wax Melts y Decoración</h3>
-                <p class="text-gray-400 text-sm">Aromas sólidos, figuras decorativas y detalles adicionales para enriquecer tu catálogo de productos.</p>
+            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
+                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">05</div>
+                <h3 class="text-xl font-bold mb-3 text-white">Wax Melts y Detalles</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Aromas sólidos para quemadores, figuras decorativas y empaques listos para enamorar a tus futuros clientes.</p>
             </div>
             <!-- Módulo 6 -->
-            <div class="bg-cardDark p-6 rounded-2xl border border-gray-800 hover:border-brandPink/50 transition-all">
-                <div class="text-brandPink text-3xl font-bold mb-3">06</div>
-                <h3 class="text-xl font-semibold mb-2">Certificado de Finalización</h3>
-                <p class="text-gray-400 text-sm">Obtén tu diploma personalizado con tu nombre al completar todas las clases y dominar el arte de las velas.</p>
+            <div class="bg-cardDark p-8 rounded-3xl border border-white/5 hover:border-brandPink/40 transition-all duration-300 group hover:-translate-y-1">
+                <div class="text-brandPink text-4xl font-extrabold mb-4 group-hover:scale-110 transition-transform origin-left">06</div>
+                <h3 class="text-xl font-bold mb-3 text-white">Certificado Oficial</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Obtén tu diploma personalizado con tu nombre al completar el curso para avalar tus conocimientos y profesionalismo.</p>
             </div>
         </div>
     </section>
 
-    <!-- 4. LLAMADA A LA ACCIÓN FINAL -->
-    <section class="py-20 bg-gradient-to-b from-darkBg to-cardDark text-center px-4">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6">¿Lista para comenzar tu viaje creativo?</h2>
-            <p class="text-gray-300 text-lg mb-8">Únete a nuestra comunidad de creadoras, aprende un oficio rentable y encuentra tu espacio de desconexión.</p>
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="py-20 bg-cardDark/50 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">Preguntas Frecuentes</h2>
+                <p class="text-gray-400">Resolvemos tus dudas para que des el paso con total seguridad.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-cardDark p-6 rounded-2xl border border-white/5">
+                    <h3 class="font-bold text-lg text-white mb-2">¿Necesito experiencia previa para tomar el curso?</h3>
+                    <p class="text-gray-400 text-sm">Absolutamente no. El curso está diseñado desde cero, llevándote paso a paso de principiante a experta, incluso si nunca has tocado una cera en tu vida.</p>
+                </div>
+                <div class="bg-cardDark p-6 rounded-2xl border border-white/5">
+                    <h3 class="font-bold text-lg text-white mb-2">¿Cómo y cuándo recibo el acceso al curso?</h3>
+                    <p class="text-gray-400 text-sm">Inmediatamente después de realizar tu pago a través de Hotmart, recibirás un correo electrónico con tus datos de acceso a la plataforma privada. El acceso es ilimitado y de por vida.</p>
+                </div>
+                <div class="bg-cardDark p-6 rounded-2xl border border-white/5">
+                    <h3 class="font-bold text-lg text-white mb-2">¿El curso sirve si quiero montar un negocio de velas?</h3>
+                    <p class="text-gray-400 text-sm">¡Totalmente! No solo aprendes la técnica artística y de formulación perfecta, sino también los secretos para comercializarlas y convertir tu pasión en un emprendimiento rentable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL DE ALTA CONVERSIÓN -->
+    <section class="py-24 bg-gradient-to-b from-cardDark/50 to-darkBg text-center px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brandPink/5 blur-3xl pointer-events-none"></div>
+        <div class="max-w-3xl mx-auto relative z-10">
+            <h2 class="text-3xl sm:text-5xl font-extrabold mb-6">¿Lista para comenzar tu viaje creativo?</h2>
+            <p class="text-gray-300 text-lg mb-10 font-light">Únete hoy a nuestra comunidad de creadoras, aprende un oficio hermoso y rentable y encuentra tu espacio de desconexión.</p>
             
-            <a href="https://hotm.art/iluminaycreavelasartesanales" target="_blank" class="inline-block bg-gradient-to-r from-brandPink to-pink-500 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg px-10 py-4 rounded-full shadow-lg shadow-brandPink/30 transition-all duration-300 transform hover:-translate-y-1">
+            <a href="https://hotm.art/iluminaycreavelasartesanales" target="_blank" class="inline-block bg-gradient-to-r from-brandPink to-pink-500 hover:from-pink-500 hover:to-pink-600 text-black font-extrabold text-lg sm:text-xl px-12 py-5 rounded-full shadow-[0_0_35px_rgba(255,105,180,0.4)] transition-all duration-300 transform hover:-scale-105">
                 INSCRIBIRME AHORA CON ACCESO INMEDIATO 🚀
             </a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-8 text-center text-xs text-gray-500 border-t border-gray-900">
+    <footer class="py-10 text-center text-xs text-gray-500 border-t border-white/5">
         <p>© 2026 Con Tus Manos | Academia de Velas Artesanales. Todos los derechos reservados.</p>
     </footer>
 
