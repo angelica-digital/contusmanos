@@ -39,14 +39,9 @@
             50% { opacity: 0.6; transform: scale(1.1); }
             100% { opacity: 0.3; transform: scale(1); }
         }
-        @keyframes borderRotate {
-            0% { filter: hue-rotate(0deg); }
-            50% { filter: hue-rotate(45deg); }
-            100% { filter: hue-rotate(0deg); }
-        }
         @keyframes borderPulse {
-            0%, 100% { box-shadow: 0 0 15px rgba(255, 119, 169, 0.4), inset 0 0 15px rgba(255, 119, 169, 0.2); }
-            50% { box-shadow: 0 0 35px rgba(255, 119, 169, 0.8), inset 0 0 25px rgba(255, 119, 169, 0.4); }
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 119, 169, 0.4), inset 0 0 15px rgba(255, 119, 169, 0.2); }
+            50% { box-shadow: 0 0 45px rgba(255, 119, 169, 0.8), inset 0 0 25px rgba(255, 119, 169, 0.4); }
         }
         .animate-gradient-text {
             background-size: 200% auto;
@@ -56,7 +51,6 @@
             animation: pinkGlow 6s ease-in-out infinite;
         }
         .animated-border-box {
-            animation: borderPulse 3s ease-in-out infinite;
             background: linear-gradient(135deg, #FF77A9, #ffb6c1, #ff3385, #FF77A9);
             background-size: 300% 300%;
             animation: borderPulse 3s ease-in-out infinite, gradientMove 5s ease infinite;
@@ -97,9 +91,9 @@
                 Descubre el arte de crear velas aromáticas y de repostería hiperrealista. Conviértelo en tu emprendimiento más rentable o en tu refugio de desconexión y terapia personal.
             </p>
 
-            <!-- VSL CONTAINER -->
-            <div class="max-w-4xl mx-auto p-2 sm:p-4 bg-gradient-to-b from-white/10 to-transparent rounded-2xl sm:rounded-3xl shadow-2xl border border-white/10 backdrop-blur-xl mb-12">
-                <div class="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl bg-black">
+            <!-- VSL CONTAINER CON BORDE LUMINOSO EN MOVIMIENTO -->
+            <div class="max-w-4xl mx-auto p-1.5 sm:p-2 animated-border-box rounded-2xl sm:rounded-[2rem] shadow-2xl mb-12">
+                <div class="relative w-full aspect-video rounded-xl sm:rounded-[1.7rem] overflow-hidden shadow-2xl bg-black">
                     <iframe class="absolute top-0 left-0 w-full h-full" 
                             src="https://www.youtube.com/embed/gM5JapP-QBs" 
                             title="Ilumina y Crea Velas Artesanales con tus Manos" 
@@ -134,7 +128,7 @@
         </div>
     </header>
 
-    <!-- SECCIÓN ACERCA DE LA PRODUCTORA (CON BORDE ANIMADO EN MOVIMIENTO) -->
+    <!-- SECCIÓN ACERCA DE LA PRODUCTORA -->
     <section class="py-20 sm:py-24 bg-cardDark/80 border-y border-white/5 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 sm:mb-16">
@@ -143,16 +137,16 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Columna Izquierda: Imagen con Borde Animado de Movimiento en Pulsación -->
+                <!-- Imagen con Borde Animado -->
                 <div class="lg:col-span-5">
-                    <div class="relative mx-auto max-w-md animated-border-box p-1 rounded-[2rem] shadow-2xl">
-                        <div class="aspect-[4/5] rounded-[1.8rem] overflow-hidden bg-gray-900 relative">
+                    <div class="relative mx-auto max-w-md animated-border-box p-1.5 rounded-[2rem] shadow-2xl">
+                        <div class="aspect-[4/5] rounded-[1.7rem] overflow-hidden bg-gray-900 relative">
                             <img src="imagem con tus manos.png" alt="Stefany Querubín" class="w-full h-full object-cover object-center">
                         </div>
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Texto descriptivo -->
+                <!-- Texto Descriptivo -->
                 <div class="lg:col-span-7 space-y-6 text-gray-300 text-base sm:text-lg font-light leading-relaxed">
                     <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2">Desarrollado por <span class="text-brandPink">Stefany Querubín</span></h3>
                     <p>Soy enfermera de formación y, tras varios años dedicados al ámbito de la salud, decidí seguir mi verdadera pasión: la creación de velas artesanales. Desde entonces, me he sumergido en este hermoso arte y he tenido el privilegio de convertirme en instructora reconocida en la fabricación de velas.</p>
