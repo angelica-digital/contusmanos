@@ -27,6 +27,18 @@
             }
         }
     </script>
+    <!-- Animación para el texto en movimiento -->
+    <style>
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient-text {
+            background-size: 200% auto;
+            animation: gradientMove 4s ease infinite;
+        }
+    </style>
 </head>
 <body class="bg-darkBg text-gray-100 font-sans antialiased selection:bg-brandPink selection:text-black overflow-x-hidden">
 
@@ -46,7 +58,8 @@
 
             <h1 class="text-3xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
                 Ilumina y Crea <br class="hidden sm:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandPink via-pink-300 to-brandLightPink">
+                <!-- TÍTULO CON DEGRADADO ANIMADO EN MOVIMIENTO -->
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-brandPink to-pink-200 animate-gradient-text">
                     Velas Artesanales
                 </span> <br class="hidden sm:block">
                 con Tus Manos
@@ -79,7 +92,7 @@
                 <p class="text-xs text-gray-400 mt-2">Pago único • Acceso ilimitado de por vida</p>
             </div>
 
-            <!-- CTA CORREGIDO -->
+            <!-- CTA -->
             <div class="space-y-4 px-4">
                 <a href="https://hotm.art/iluminaycreavelasartesanales" target="_blank" class="inline-block w-full sm:w-auto bg-gradient-to-r from-brandPink to-pink-400 hover:from-pink-400 hover:to-pink-500 text-black font-extrabold text-base sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-[0_0_35px_rgba(255,119,169,0.4)] transition-all duration-300 transform hover:scale-105 text-center">
                     ¡QUIERO INSCRIBIRME AL CURSO AHORA! 💕
@@ -122,7 +135,7 @@
         </div>
     </section>
 
-    <!-- MÓDULOS DEL MASTERCLASS (ESTRUCTURA OFICIAL DE HOTMART) -->
+    <!-- MÓDULOS DEL MASTERCLASS -->
     <section class="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div class="text-center mb-16">
             <span class="text-brandPink uppercase tracking-widest text-xs font-bold block mb-3">PLAN DE ESTUDIOS OFICIAL</span>
@@ -164,7 +177,7 @@
         </div>
     </section>
 
-    <!-- BONOS DE REGALO EXCLUSIVOS (LOS 8 BONOS OFICIALES) -->
+    <!-- BONOS DE REGALO EXCLUSIVOS -->
     <section class="py-20 bg-gradient-to-b from-darkBg to-cardDark border-t border-white/5">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
