@@ -39,12 +39,27 @@
             50% { opacity: 0.6; transform: scale(1.1); }
             100% { opacity: 0.3; transform: scale(1); }
         }
+        @keyframes borderRotate {
+            0% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(45deg); }
+            100% { filter: hue-rotate(0deg); }
+        }
+        @keyframes borderPulse {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 119, 169, 0.4), inset 0 0 15px rgba(255, 119, 169, 0.2); }
+            50% { box-shadow: 0 0 35px rgba(255, 119, 169, 0.8), inset 0 0 25px rgba(255, 119, 169, 0.4); }
+        }
         .animate-gradient-text {
             background-size: 200% auto;
             animation: gradientMove 4s ease infinite;
         }
         .animate-bg-glow {
             animation: pinkGlow 6s ease-in-out infinite;
+        }
+        .animated-border-box {
+            animation: borderPulse 3s ease-in-out infinite;
+            background: linear-gradient(135deg, #FF77A9, #ffb6c1, #ff3385, #FF77A9);
+            background-size: 300% 300%;
+            animation: borderPulse 3s ease-in-out infinite, gradientMove 5s ease infinite;
         }
     </style>
 </head>
@@ -119,7 +134,7 @@
         </div>
     </header>
 
-    <!-- SECCIÓN ACERCA DE LA PRODUCTORA (CON LA IMAGEN DE 1080x1350px) -->
+    <!-- SECCIÓN ACERCA DE LA PRODUCTORA (CON BORDE ANIMADO EN MOVIMIENTO) -->
     <section class="py-20 sm:py-24 bg-cardDark/80 border-y border-white/5 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 sm:mb-16">
@@ -128,11 +143,10 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Columna Izquierda: Imagen de Stefany en formato 4:5 (1080x1350px) -->
+                <!-- Columna Izquierda: Imagen con Borde Animado de Movimiento en Pulsación -->
                 <div class="lg:col-span-5">
-                    <div class="relative mx-auto max-w-md bg-gradient-to-b from-brandPink/30 to-transparent p-3 rounded-3xl border border-white/10 shadow-2xl">
-                        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-gray-900 relative">
-                            <!-- Nota: Si quieres evitar problemas con espacios en GitHub, puedes renombrar tu archivo a 'imagem-con-tus-manos.png' -->
+                    <div class="relative mx-auto max-w-md animated-border-box p-1 rounded-[2rem] shadow-2xl">
+                        <div class="aspect-[4/5] rounded-[1.8rem] overflow-hidden bg-gray-900 relative">
                             <img src="imagem con tus manos.png" alt="Stefany Querubín" class="w-full h-full object-cover object-center">
                         </div>
                     </div>
